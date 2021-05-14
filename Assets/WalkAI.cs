@@ -6,14 +6,14 @@ public class WalkAI: MonoBehaviour
 {
     [Header("Walking Behaviour")]
     public float walkSpeed=2;
-    public float maxDistance=1.5f;
+    public float maxDistance=1f;
     public float maxDepth=2f;
-    private float distanceToObjectSide;
+    public float distanceToObjectSide;
     private float distanceToGround;
     private bool canGoRight=false;
     private bool isInAlert=false;
 
-    RaycastHit2D hit2Dside,hit2Ddown;
+    public RaycastHit2D hit2Dside,hit2Ddown;
     public Transform raycastOrigin;
 
     void Start()

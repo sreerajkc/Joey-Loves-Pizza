@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
-{
+{   
+    [HideInInspector]
     public int id=-1;
     public List<SelectUI> selectables;
+    [HideInInspector]
     public PointerControl pointerControl;
-    public static GameManager instance; 
+    [HideInInspector]
+    public static GameManager instance;
+    [HideInInspector] 
     public bool isSelected=false,isOutOfBoundary=false;
     bool isBeingCopied=false;
 

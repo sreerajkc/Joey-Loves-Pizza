@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5078983955449990300}
   m_Layer: 5
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7655794102963019349, guid: 15bf061d9b3883548940838f72cdd937,
+  m_Sprite: {fileID: 5144551056978992909, guid: 15bf061d9b3883548940838f72cdd937,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
