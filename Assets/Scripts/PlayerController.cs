@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Sprite deathSprite;
+    public Sprite deathSprite,fallSprite;
     private WalkAI _walkAI;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -25,6 +25,32 @@ public class PlayerController : MonoBehaviour
         {
             select.isSelected=false;
             select.ColorChange();
+        }
+    }
+  private void OnTriggerEnter2D(Collider2D other) {
+      if(other.CompareTag("Pizza"))
+        {
+            other.gameObject.SetActive(false);
+            Debug.Log("You won");
+        }
+  }
+
+    private void NextRound()
+    {
+
+    }
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        _walkAI.enabled=true;
+        animator.enabled=true;
+    }
+    private void OnCollisionExit2D(Collision2D other) 
+    {
+        if(other.collider.CompareTag("Ground"))
+        {
+            _walkAI.enabled=false;
+            animator.enabled=false;
+            spriteRenderer.sprite=fallSprite;
         }
     }
 }

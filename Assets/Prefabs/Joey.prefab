@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3867807977368563900}
   - component: {fileID: 3867807977368563903}
   - component: {fileID: 3867807977368563888}
+  - component: {fileID: 1566659076}
   m_Layer: 8
   m_Name: Joey
   m_TagString: Player
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 86f99f763930eb84c9c96246891e11c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -166,8 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
-  maxDistance: 1
-  maxDepth: 2
+  maxDistance: 1.2
+  maxDepth: 3
   distanceToObjectSide: 0
   raycastOrigin: {fileID: 3867807977565153933}
 --- !u!114 &3867807977368563888
@@ -185,6 +186,21 @@ MonoBehaviour:
   id: 0
   sprite: {fileID: 3867807977368563898}
   isSelected: 0
+  canBeReplicated: 0
+--- !u!114 &1566659076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867807977368563897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd23e3802a2e574ab486e5621e987e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSprite: {fileID: 21300000, guid: b112dc234d7e00645a6a928a0a12c1c1, type: 3}
+  fallSprite: {fileID: 21300000, guid: 876ce35fb0f08954c9bbac760bd87b0b, type: 3}
 --- !u!1 &3867807977565153932
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3867807977565153932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.92, y: -0.74, z: 0}
+  m_LocalPosition: {x: 0.92, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3867807977368563899}

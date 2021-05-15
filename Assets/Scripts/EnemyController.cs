@@ -38,7 +38,6 @@ public class EnemyController : MonoBehaviour
             if (_walkAI.distanceToObjectSide <= attackRadius)
             {
                 Attack();
-                
             }
         }
         else

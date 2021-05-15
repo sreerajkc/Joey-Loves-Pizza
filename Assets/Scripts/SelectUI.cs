@@ -9,7 +9,8 @@ public class SelectUI : MonoBehaviour
     [SerializeField]
     int id;
     public SpriteRenderer sprite;
-    public bool isSelected=false;    
+    public bool isSelected=false;
+    public bool canBeReplicated=false;    
     public void Initialize(int _id)
     {
         id=_id;
