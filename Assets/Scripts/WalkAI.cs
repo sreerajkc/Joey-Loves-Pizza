@@ -12,7 +12,6 @@ public class WalkAI: MonoBehaviour
     public float distanceToObjectSide;
     private float distanceToGround;
     private bool canGoRight=false;
-    private bool isInAlert=false;
     [HideInInspector]
     public RaycastHit2D hit2Dside,hit2Ddown;
     public Transform raycastOrigin;

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public Sprite deathSprite,fallSprite;
@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
       if(other.CompareTag("Pizza"))
         {
             other.gameObject.SetActive(false);
+            int nxtLvl=SceneManager.GetActiveScene().buildIndex + 1;
+            GameManager.instance.SaveGame(nxtLvl);
+            SceneManager.LoadScene(nxtLvl);
             Debug.Log("You won");
         }
   }

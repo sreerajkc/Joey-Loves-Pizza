@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {   
     [HideInInspector]
     public int id=-1;
     public int maxMoves=3;
-    [HideInInspector]
+
+    public static int SceneNo=0;
     public List<SelectUI> selectables;
     [Header("Scripts")]
     public PointerControl pointerControl;
@@ -21,6 +23,10 @@ public class GameManager : MonoBehaviour
     private Vector3 pastePos;
     private void Awake() 
     {
+        if(PlayerPrefs.GetInt("Fresher")!=0)
+        {
+            PlayerPrefs.SetInt("Fresher",0);
+        }
         instance=this;
         int order=0;
         foreach(SelectUI selectable in selectables)
@@ -31,6 +37,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start() {
         Cursor.visible=false;
+        gameObject.SetActive(true);
     }
 
     private void Update() {
@@ -134,6 +141,11 @@ public class GameManager : MonoBehaviour
         maxMoves-=_moveNo;
         uImanager.SetMoveNo(maxMoves);
 
+    }
+    public void SaveGame(int lvlno)
+    {
+        PlayerPrefs.SetInt("Fresher",1);
+        PlayerPrefs.SetInt("Level",lvlno);
     }
         
 

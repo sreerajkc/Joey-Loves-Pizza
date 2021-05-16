@@ -71,6 +71,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.collider.CompareTag("Box"))
         {
+            GameManager.instance.maxMoves++;
             animator.enabled = false;
             _walkAI.enabled = false;
             boxCollider.size = colliderSize;
